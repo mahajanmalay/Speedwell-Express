@@ -1,0 +1,119 @@
+<ion-menu side="start" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item routerLink="/" routerDirection="forward" (click)="closeMenu()">
+        <ion-label>Home</ion-label>
+      </ion-item>
+      <ion-item routerLink="/services" routerDirection="forward" (click)="closeMenu()">
+        <ion-label>Services</ion-label>
+      </ion-item>
+      <ion-item routerLink="/policies" routerDirection="forward" (click)="closeMenu()">
+        <ion-label>Policies</ion-label>
+      </ion-item>
+      <ion-item routerLink="/about" routerDirection="forward" (click)="closeMenu()">
+        <ion-label>About Us</ion-label>
+      </ion-item>
+      <ion-item routerLink="/contact" routerDirection="forward" (click)="closeMenu()">
+        <ion-label>Contact Us</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <div class="logo-container">
+      <img class="image" src="assets/images/logo.jpeg" alt="Logo">
+    </div>
+    <ion-buttons slot="end">
+      <ion-button (click)="staffLogin()">Staff Login</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="main-content">
+  <!-- Your existing content here -->
+ 
+
+  
+
+  <!-- price estimation code  -->
+  <!-- ... (existing code) ... -->
+
+<!-- price-estimation.page.html -->
+<!-- home.page.html -->
+<ion-card class="price-estimation-box">
+  <ion-card-header>
+    <ion-icon name="calculator"></ion-icon>
+    <ion-label>Price Estimation</ion-label>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>
+      <ion-label position="stacked">Package Weight</ion-label>
+      <ion-input type="number" placeholder="Enter weight" [(ngModel)]="packageWeight"></ion-input>
+      <ion-label position="stacked">Weight Unit</ion-label>
+      <ion-select placeholder="Select unit" [(ngModel)]="weightUnit">
+        <ion-select-option value="g">Grams</ion-select-option>
+        <ion-select-option value="kg">Kilograms</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Destination Type</ion-label>
+      <ion-select placeholder="Select destination type" [(ngModel)]="destinationType">
+        <ion-select-option value="Pune&PCMC">Pune&PCMC</ion-select-option>
+        <ion-select-option value="Mumbai">Mumbai</ion-select-option>
+        <ion-select-option value="Maharashtra">Maharashtra</ion-select-option>
+        <ion-select-option value="Out of Maharashtra">Out of Maharashtra</ion-select-option>
+        <ion-select-option value="North-East/J&K">North-East/J&K</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item *ngIf="destinationType === 'Out of Maharashtra' || destinationType === 'North-East/J&K'">
+      <ion-label position="stacked">Transport Method</ion-label>
+      <ion-select placeholder="Select transport method" [(ngModel)]="transportMethod">
+        <ion-select-option value="byRoad">By Road</ion-select-option>
+        <ion-select-option value="byAir">By Air</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="full" (click)="estimatePrice()">
+      <ion-icon name="cash"></ion-icon>
+      <ion-label>Estimate Price</ion-label>
+    </ion-button>
+    <ion-item *ngIf="estimatedPrice !== undefined">
+      <ion-label>Estimated Price:</ion-label>
+      <ion-text>{{ estimatedPrice | currency:'INR' }}</ion-text>
+    </ion-item>
+  </ion-card-content>
+</ion-card>
+
+<!-- Track Your Order Box -->
+<ion-card class="track-order-box">
+  <ion-card-header>
+    <ion-icon name="search"></ion-icon>
+    <ion-label>Track Your Package</ion-label>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>
+      <ion-input placeholder="Enter Order ID"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="trackOrder()">
+      <ion-icon name="navigate"></ion-icon>
+      <ion-label>Track</ion-label>
+    </ion-button>
+  </ion-card-content>
+</ion-card>
+
+
+<!-- ... (existing code) ... -->
+
+</ion-content>
+
+

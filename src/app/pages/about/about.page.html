@@ -1,0 +1,39 @@
+<!-- about-us.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>About Us</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="about-us-page">
+
+  <!-- Company Information -->
+  <div class="company-info">
+    <h2>Welcome to SpeedWell Express</h2>
+    <p>
+      Speedwell Express in Karve Nagar, Pune, is a reliable name in the industry, committed to delivering the best experience to our customers. Since our inception in 2002, we have prioritized customer satisfaction, ensuring they remain at the center of our business operations and philosophy. Located at Shop No.01, Sarthak Apartment, Opp.H P Gas, Kakade Palace Marriage Hall, Opp.H P Gas, Karve Nagar-411052, near Kakade Palace Marriage Hall, it is easy to locate Speedwell Express on the map. For any assistance or questions, feel free to contact us directly during business hours.
+    </p>
+  </div>
+
+  <!-- Office Images Slideshow -->
+  <div class="office-carousel">
+    <div class="slides-container">
+      <div *ngFor="let image of officeImages" class="slide">
+        <img [src]="image" alt="Office Image">
+      </div>
+    </div>
+  </div>
+
+  <!-- Owner Section -->
+  <div class="owner-section">
+    <h3>Owner/Proprietor</h3>
+    <ion-img class="owner-image" src="../../../assets/images/GaneshMahajan.jpeg" alt="Owner"></ion-img>
+    <div class="owner-info">
+      <h3>Ganesh Mahajan</h3>
+      <!-- Add additional information about the owner if needed -->
+    </div>
+  </div>
+
+  <!-- Additional Company Details -->
+  
+
+</ion-content>

@@ -1,0 +1,96 @@
+/* about-us.page.scss */
+.about-us-page {
+  padding: 20px;
+}
+
+.company-info {
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Dark grey text color */
+  }
+
+  p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #555; /* Medium grey text color */
+  }
+}
+
+.office-carousel {
+  .slides-container {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .slide {
+    min-width: 100%;
+    flex: 0 0 auto;
+
+    img {
+      width: 22rem;
+      border-radius: 10px;
+    }
+  }
+}
+
+.owner-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Dark grey text color */
+  }
+
+  .owner-image {
+    height: 30vh;
+    border-radius: 50%;
+  }
+
+  .owner-info {
+    /* Add styling for owner information if needed */
+  }
+}
+
+.additional-details {
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Dark grey text color */
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 20px;
+
+      h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333; /* Dark grey text color */
+      }
+
+      p {
+        font-size: 16px;
+        color: #555; /* Medium grey text color */
+      }
+    }
+  }
+}

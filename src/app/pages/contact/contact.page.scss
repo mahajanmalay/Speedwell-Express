@@ -1,0 +1,39 @@
+/* contact-us.page.scss */
+.contact-us-page {
+    padding: 20px;
+  }
+  
+  .contact-info {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333; /* Dark grey text color */
+    }
+  
+    p {
+      font-size: 16px;
+      margin: 10px 0;
+      color: #555; /* Medium grey text color */
+    }
+  
+    a {
+      color: #3498db; /* Link color */
+    }
+  }
+  
+  .map-section {
+    border-radius: 10px;
+    overflow: hidden;
+  
+    iframe {
+      width: 100%;
+      border: 0;
+      border-radius: 10px;
+    }
+  }
+  
